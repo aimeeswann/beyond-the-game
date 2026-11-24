@@ -2,346 +2,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beyond the Game | Digital Sports Journalism</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sport in Focus | Sport, Data & Journalism</title>
 
-<style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: #101010;
-    color: #f5f5f5;
-    font-family: Arial, sans-serif;
-    line-height: 1.7;
-}
-
-header {
-    background: #181818;
-    padding: 22px 8%;
-    border-bottom: 2px solid #e10600;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.logo {
-    font-size: 25px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.logo span {
-    color: #e10600;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 14px;
-}
-
-nav a:hover {
-    color: #ff3333;
-}
-
-.hero {
-    min-height: 470px;
-    padding: 100px 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background:
-        radial-gradient(ellipse at 85% 30%, #6b1111 0%, transparent 40%),
-        linear-gradient(120deg, #171717, #292020);
-}
-
-.hero-label {
-    color: #ff4545;
-    letter-spacing: 4px;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.hero h1 {
-    font-size: clamp(42px, 7vw, 76px);
-    line-height: 1.05;
-    max-width: 850px;
-    margin: 20px 0;
-}
-
-.hero h1 span {
-    color: #e10600;
-}
-
-.hero p {
-    color: #cccccc;
-    max-width: 650px;
-    font-size: 18px;
-}
-
-.hero-button {
-    display: inline-block;
-    width: fit-content;
-    margin-top: 30px;
-    padding: 13px 25px;
-    background: #e10600;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-}
-
-.hero-button:hover {
-    background: #a90000;
-}
-
-.section {
-    padding: 70px 8%;
-}
-
-.section-heading {
-    margin-bottom: 35px;
-}
-
-.section-heading h2 {
-    font-size: 32px;
-}
-
-.section-heading p {
-    color: #aaa;
-    margin-top: 8px;
-}
-
-.stories {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 25px;
-}
-
-.story-card {
-    background: #1d1d1d;
-    border: 1px solid #393939;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.2s;
-}
-
-.story-card:hover {
-    transform: translateY(-5px);
-}
-
-.story-visual {
-    height: 190px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 65px;
-}
-
-.f1-visual {
-    background: linear-gradient(135deg, #480000, #d20b0b);
-}
-
-.football-visual {
-    background: linear-gradient(135deg, #123d2a, #26764c);
-}
-
-.story-content {
-    padding: 25px;
-}
-
-.category {
-    color: #ff4545;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.story-content h3 {
-    font-size: 23px;
-    margin: 12px 0;
-}
-
-.story-content p {
-    color: #bbb;
-    font-size: 15px;
-}
-
-.read-more {
-    display: inline-block;
-    margin-top: 20px;
-    color: #ff4545;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.about {
-    background: #191919;
-    border-top: 1px solid #333;
-}
-
-.about p {
-    color: #ccc;
-    max-width: 800px;
-    margin-top: 15px;
-}
-
-footer {
-    text-align: center;
-    padding: 30px;
-    color: #999;
-    font-size: 13px;
-    border-top: 1px solid #333;
-}
-
-@media (max-width: 600px) {
-    header {
-        padding: 18px 5%;
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    nav {
-        flex-direction: column;
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #F7F8FA;
+      color: #263445;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #FFFFFF;
+      border-bottom: 1px solid #DCE2E9;
+      padding: 22px 8%;
+    }
+
+    .header-content {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      color: #14243B;
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .tagline {
+      color: #2878D0;
+      font-size: 11px;
+      letter-spacing: 2px;
+      font-weight: bold;
     }
 
     nav a {
-        margin: 0 8px;
+      color: #263A55;
+      text-decoration: none;
+      margin-left: 22px;
+      font-size: 14px;
     }
 
-    .hero {
-        padding: 70px 7%;
+    nav a:hover {
+      color: #2878D0;
     }
 
-    .section {
-        padding: 50px 6%;
+    main {
+      max-width: 1100px;
+      margin: 55px auto;
+      padding: 0 25px;
     }
-}
-</style>
+
+    .intro {
+      margin-bottom: 38px;
+      max-width: 700px;
+    }
+
+    .intro h1 {
+      color: #14243B;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.15;
+      margin-bottom: 15px;
+    }
+
+    .intro p {
+      color: #586779;
+      font-size: 17px;
+    }
+
+    .section-label {
+      color: #2878D0;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .stories {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .story-card {
+      padding: 30px;
+      border-radius: 8px;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .f1 {
+      background: #14243B;
+      color: #FFFFFF;
+    }
+
+    .football {
+      background: #E6EDF5;
+      color: #14243B;
+    }
+
+    .category {
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+    }
+
+    .story-card h2 {
+      font-size: 32px;
+      line-height: 1.15;
+      margin: 18px 0 12px;
+    }
+
+    .story-card p {
+      font-size: 15px;
+      max-width: 390px;
+      margin-bottom: 22px;
+    }
+
+    .f1 p {
+      color: #D0D9E4;
+    }
+
+    .football p {
+      color: #52647A;
+    }
+
+    .story-link {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .f1 .story-link {
+      color: #72B3FF;
+    }
+
+    .football .story-link {
+      color: #2878D0;
+    }
+
+    .story-link:hover {
+      text-decoration: underline;
+    }
+
+    .about {
+      margin-top: 55px;
+      padding: 28px;
+      background: #FFFFFF;
+      border-left: 4px solid #2878D0;
+    }
+
+    .about h2 {
+      color: #14243B;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .about p {
+      color: #586779;
+      font-size: 15px;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 25px;
+      text-align: center;
+      background: #14243B;
+      color: #D0D9E4;
+      font-size: 13px;
+    }
+
+    @media (max-width: 650px) {
+      .stories {
+        grid-template-columns: 1fr;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 15px;
+      }
+
+      main {
+        margin-top: 35px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-    <nav>
-        <div class="logo">BEYOND <span>THE GAME.</span></div>
+  <header>
+    <div class="header-content">
+      <div>
+        <div class="logo">SPORT IN FOCUS.</div>
+        <div class="tagline">SPORT · DATA · JOURNALISM</div>
+      </div>
 
-        <div>
-            <a href="index.html">Home</a>
-            <a href="#stories">Stories</a>
-            <a href="#about">About</a>
-        </div>
-    </nav>
-</header>
-
-<section class="hero">
-    <div class="hero-label">SPORTS • DATA • INVESTIGATION</div>
-
-    <h1>THE STORIES<br>BEHIND <span>SPORT.</span></h1>
-
-    <p>
-        Exploring the relationship between sporting ambition,
-        technological innovation and athlete welfare through
-        data-driven digital journalism.
-    </p>
-
-    <a href="#stories" class="hero-button">EXPLORE OUR STORIES</a>
-</section>
-
-<section class="section" id="stories">
-
-    <div class="section-heading">
-        <h2>Featured Stories</h2>
-        <p>Two investigations exploring the changing world of modern sport.</p>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#stories">Stories</a>
+        <a href="#about">About</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="stories">
+  <main>
 
-        <article class="story-card">
-            <div class="story-visual f1-visual">🏎️</div>
+    <section class="intro">
+      <h1>A closer look at modern sport.</h1>
+      <p>
+        Exploring the people, performances and issues
+        shaping sport today.
+      </p>
+    </section>
 
-            <div class="story-content">
-                <div class="category">MOTORSPORT • FORMULA 1</div>
+    <section id="stories">
+      <div class="section-label">FEATURED STORIES</div>
 
-                <h3>Real-life Mario Kart?</h3>
+      <div class="stories">
 
-                <p>
-                    Formula 1's 2026 regulations:
-                    balancing speed and survival.
-                    An investigation into new power-unit
-                    technology, energy management and
-                    driver safety.
-                </p>
+        <article class="story-card f1">
+          <div>
+            <div class="category">FEATURE 01 · MOTORSPORT</div>
+            <h2>REAL-LIFE<br>MARIO KART?</h2>
+            <p>
+              Formula 1's 2026 regulations:
+              balancing speed and survival.
+            </p>
+          </div>
 
-                <a href="story1.html" class="read-more">
-                    READ THE STORY →
-                </a>
-            </div>
+          <a class="story-link" href="story1.html">
+            READ THE STORY ↗
+          </a>
         </article>
 
-        <article class="story-card">
-            <div class="story-visual football-visual">⚽</div>
+        <article class="story-card football">
+          <div>
+            <div class="category">FEATURE 02 · FOOTBALL</div>
+            <h2>NO DAYS OFF.</h2>
+            <p>
+              Football's expanding calendar
+              and the impact on player welfare.
+            </p>
+          </div>
 
-            <div class="story-content">
-                <div class="category">FOOTBALL • PLAYER WELFARE</div>
-
-                <h3>No Days Off</h3>
-
-                <p>
-                    Football's expanding calendar and its
-                    impact on player welfare. An investigation
-                    into fixture congestion, recovery time
-                    and injury risks.
-                </p>
-
-                <a href="story2.html" class="read-more">
-                    READ THE STORY →
-                </a>
-            </div>
+          <a class="story-link" href="story2.html">
+            READ THE STORY ↗
+          </a>
         </article>
 
-    </div>
-</section>
+      </div>
+    </section>
 
-<section class="section about" id="about">
+    <section class="about" id="about">
+      <h2>About this project</h2>
+      <p>
+        Sport in Focus is a student digital journalism project
+        exploring current issues in sport through reporting,
+        research and data visualisation.
+      </p>
+    </section>
 
-    <div class="section-heading">
-        <h2>About This Project</h2>
-    </div>
+  </main>
 
-    <p>
-        Beyond the Game is a digital journalism project
-        examining important developments in professional sport.
-        Through research, data analysis and interactive
-        visualisations, the project explores how technology,
-        competition and commercial expansion influence
-        athlete safety and welfare.
-    </p>
+  <footer>
+    Sport in Focus · Student Digital Journalism Project · 2026
+  </footer>
 
-    <p>
-        This project brings together written journalism
-        and digital storytelling to make complex sporting
-        issues accessible to a wider audience.
-    </p>
+</body>
+</html>
 
-</section>
-
-<footer>
-    <p>BEYOND THE GAME | Digital Journalism Project | 2026</p>
-</footer>
 
 </body>
 </html>
