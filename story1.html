@@ -6,38 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Real-life Mario Kart? | Sport in Focus</title>
 
-    .race-track {
-      height: 48px;
-      background: #292929;
-      border-bottom: 3px solid #E32636;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .race-car {
-      position: absolute;
-      top: 5px;
-      left: -55px;
-      font-size: 27px;
-      animation: race 7s linear infinite;
-    }
-
-    @keyframes race {
-      from {
-        left: -55px;
-      }
-      to {
-        left: calc(100% + 55px);
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .race-car {
-        animation: none;
-        left: 20px;
-      }
-    }
-
   <style>
     * {
       box-sizing: border-box;
@@ -197,6 +165,32 @@
         padding: 55px 22px;
       }
     }
+
+    .race-track {
+      height: 48px;
+      background: #292929;
+      border-bottom: 3px solid #E32636;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .race-car {
+      position: absolute;
+      top: 5px;
+      left: -55px;
+      font-size: 27px;
+      animation: race 7s linear infinite;
+    }
+
+    @keyframes race {
+      from {
+        left: -55px;
+      }
+      to {
+        left: calc(100% + 55px);
+      }
+    }
+
   </style>
 </head>
 
@@ -213,6 +207,9 @@
     </div>
   </header>
 
+  <div class="race-track">
+  <div class="race-car">🏎️</div>
+</div>
   <section class="hero">
     <div class="hero-content">
       <div class="category">MOTORSPORT · FEATURE 01</div>
