@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beyond the Game | Digital Sports Journalism</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #101010;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+header {
+    background: #181818;
+    padding: 22px 8%;
+    border-bottom: 2px solid #e10600;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #e10600;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #ff3333;
+}
+
+.hero {
+    min-height: 470px;
+    padding: 100px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+        radial-gradient(ellipse at 85% 30%, #6b1111 0%, transparent 40%),
+        linear-gradient(120deg, #171717, #292020);
+}
+
+.hero-label {
+    color: #ff4545;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 1.05;
+    max-width: 850px;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #e10600;
+}
+
+.hero p {
+    color: #cccccc;
+    max-width: 650px;
+    font-size: 18px;
+}
+
+.hero-button {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 30px;
+    padding: 13px 25px;
+    background: #e10600;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.hero-button:hover {
+    background: #a90000;
+}
+
+.section {
+    padding: 70px 8%;
+}
+
+.section-heading {
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+}
+
+.section-heading p {
+    color: #aaa;
+    margin-top: 8px;
+}
+
+.stories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 25px;
+}
+
+.story-card {
+    background: #1d1d1d;
+    border: 1px solid #393939;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+}
+
+.story-visual {
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 65px;
+}
+
+.f1-visual {
+    background: linear-gradient(135deg, #480000, #d20b0b);
+}
+
+.football-visual {
+    background: linear-gradient(135deg, #123d2a, #26764c);
+}
+
+.story-content {
+    padding: 25px;
+}
+
+.category {
+    color: #ff4545;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.story-content h3 {
+    font-size: 23px;
+    margin: 12px 0;
+}
+
+.story-content p {
+    color: #bbb;
+    font-size: 15px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 20px;
+    color: #ff4545;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about {
+    background: #191919;
+    border-top: 1px solid #333;
+}
+
+.about p {
+    color: #ccc;
+    max-width: 800px;
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #999;
+    font-size: 13px;
+    border-top: 1px solid #333;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero {
+        padding: 70px 7%;
+    }
+
+    .section {
+        padding: 50px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">BEYOND <span>THE GAME.</span></div>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="#stories">Stories</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-label">SPORTS • DATA • INVESTIGATION</div>
+
+    <h1>THE STORIES<br>BEHIND <span>SPORT.</span></h1>
+
+    <p>
+        Exploring the relationship between sporting ambition,
+        technological innovation and athlete welfare through
+        data-driven digital journalism.
+    </p>
+
+    <a href="#stories" class="hero-button">EXPLORE OUR STORIES</a>
+</section>
+
+<section class="section" id="stories">
+
+    <div class="section-heading">
+        <h2>Featured Stories</h2>
+        <p>Two investigations exploring the changing world of modern sport.</p>
+    </div>
+
+    <div class="stories">
+
+        <article class="story-card">
+            <div class="story-visual f1-visual">🏎️</div>
+
+            <div class="story-content">
+                <div class="category">MOTORSPORT • FORMULA 1</div>
+
+                <h3>Real-life Mario Kart?</h3>
+
+                <p>
+                    Formula 1's 2026 regulations:
+                    balancing speed and survival.
+                    An investigation into new power-unit
+                    technology, energy management and
+                    driver safety.
+                </p>
+
+                <a href="story1.html" class="read-more">
+                    READ THE STORY →
+                </a>
+            </div>
+        </article>
+
+        <article class="story-card">
+            <div class="story-visual football-visual">⚽</div>
+
+            <div class="story-content">
+                <div class="category">FOOTBALL • PLAYER WELFARE</div>
+
+                <h3>No Days Off</h3>
+
+                <p>
+                    Football's expanding calendar and its
+                    impact on player welfare. An investigation
+                    into fixture congestion, recovery time
+                    and injury risks.
+                </p>
+
+                <a href="story2.html" class="read-more">
+                    READ THE STORY →
+                </a>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<section class="section about" id="about">
+
+    <div class="section-heading">
+        <h2>About This Project</h2>
+    </div>
+
+    <p>
+        Beyond the Game is a digital journalism project
+        examining important developments in professional sport.
+        Through research, data analysis and interactive
+        visualisations, the project explores how technology,
+        competition and commercial expansion influence
+        athlete safety and welfare.
+    </p>
+
+    <p>
+        This project brings together written journalism
+        and digital storytelling to make complex sporting
+        issues accessible to a wider audience.
+    </p>
+
+</section>
+
+<footer>
+    <p>BEYOND THE GAME | Digital Journalism Project | 2026</p>
+</footer>
+
+</body>
+</html>
